@@ -22,9 +22,10 @@ Alternative names considered: Oak & Signal, Fieldwork Digital, Near & Clear, and
 - Build-only / managed-monthly pricing switch
 - Responsive mobile navigation
 - Accessible structure, visible focus states and reduced-motion support
-- Lightweight scroll reveals and a single hero “measure” animation
-- Optimised metadata and an embedded custom favicon
-- Original project-owned hero artwork
+- One consistent sans-serif typeface and a white, charcoal and green palette
+- A CSS-built example page structure in place of decorative photography
+- Subtle hero entrance motion with reduced-motion support
+- Optimised metadata and a custom favicon
 
 ## Run locally
 
@@ -42,12 +43,11 @@ Then open `http://localhost:4173`.
 
 Replace these placeholders:
 
-1. In `index.html`, replace `hello@yourdomain.co.uk` and `+440000000000` with the real contact details.
-2. Replace “Taking on projects for autumn” if the availability message changes.
-3. Confirm the selected business name, domain and trademark position.
-4. Add the real domain to canonical metadata once purchased.
-5. Add privacy/cookie pages if the final analytics or marketing setup requires them.
-6. Add analytics immediately before `</head>`. Recommended placeholders:
+1. In `dist/index.html` and `dist/script.js`, replace `hello@yourdomain.co.uk` with the real contact address.
+2. Confirm the selected business name, domain and trademark position.
+3. Add the real domain to canonical metadata once purchased.
+4. Add privacy/cookie pages if the final analytics or marketing setup requires them.
+5. Add analytics immediately before `</head>` in `dist/index.html`. Recommended placeholder:
 
 ```html
 <!-- Analytics placeholder: Plausible, Fathom or GA4 -->
@@ -81,7 +81,6 @@ The pricing is positioned as an honest starting point and should be adjusted onc
 .
 ├── .openai/hosting.json
 └── dist
-    ├── assets/kent-studio.webp
     ├── favicon.svg
     ├── index.html
     ├── script.js
