@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Concept 01 — Clear & Commercial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --green: #17a65a;
+        --ink: #17211d;
+        --line: #d9e8dc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #fff;
+        color: var(--ink);
+        font-family: Manrope, Arial, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      :focus-visible {
+        outline: 3px solid var(--green);
+        outline-offset: 4px;
+      }
+      .wrap {
+        width: min(100% - 56px, 1270px);
+        margin: auto;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 84px;
+        border-bottom: 1px solid var(--line);
+      }
+      .logo {
+        font-size: 19px;
+        font-weight: 800;
+        letter-spacing: -0.06em;
+      }
+      .logo b {
+        color: var(--green);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .nav .contact {
+        padding: 11px 17px;
+        border-radius: 9px;
+        background: var(--green);
+        color: #fff;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 0.9fr;
+        align-items: center;
+        gap: clamp(48px, 6vw, 95px);
+        min-height: calc(100svh - 85px);
+        padding: 72px 0;
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin: 0 0 24px;
+        color: #168448;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+      .eyebrow i {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--green);
+      }
+      h1 {
+        max-width: 700px;
+        margin: 0;
+        font-size: clamp(48px, 5.5vw, 84px);
+        font-weight: 800;
+        letter-spacing: -0.075em;
+        line-height: 1.05;
+      }
+      h1 em {
+        color: var(--green);
+        font-style: normal;
+      }
+      .lead {
+        max-width: 570px;
+        margin: 25px 0 28px;
+        color: #5d6a61;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 16px 20px;
+        border: 1px solid var(--green);
+        border-radius: 10px;
+        background: var(--green);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 800;
+        transition: transform 0.2s ease;
+      }
+      .button:hover {
+        transform: translateY(-3px);
+      }
+      .button.alt {
+        border-color: #cbd9cf;
+        background: #fff;
+        color: var(--ink);
+      }
+      .facts {
+        display: flex;
+        gap: 30px;
+        margin-top: 48px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        color: #68756b;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .facts span::before {
+        content: "✓";
+        margin-right: 8px;
+        color: var(--green);
+      }
+      .visual {
+        position: relative;
+        padding: 22px;
+        border-radius: 22px;
+        background: #edf9ef;
+      }
+      .window {
+        overflow: hidden;
+        border: 1px solid #dce9df;
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 0 28px 55px #173e231c;
+      }
+      .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+        border-bottom: 1px solid #ecf1ed;
+        color: #8a968c;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+      .dots {
+        display: flex;
+        gap: 5px;
+      }
+      .dots i {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #b8c9be;
+      }
+      .inside {
+        padding: 36px;
+      }
+      .inside small {
+        color: #188b4d;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+      }
+      .inside h2 {
+        max-width: 350px;
+        margin: 12px 0;
+        font-size: clamp(28px, 2.6vw, 39px);
+        line-height: 1.1;
+        letter-spacing: -0.06em;
+      }
+      .inside p {
+        max-width: 330px;
+        color: #637067;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+      .mock-button {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 10px 14px;
+        border-radius: 6px;
+        background: var(--green);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+      }
+      .wire {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 32px;
+        padding-top: 22px;
+        border-top: 1px solid #e5eee7;
+      }
+      .wire div {
+        min-height: 82px;
+        padding: 12px 10px;
+        border: 1px solid #e0eae2;
+        border-radius: 8px;
+      }
+      .wire b,
+      .wire span {
+        display: block;
+        font-size: 10px;
+      }
+      .wire b {
+        margin: 8px 0 3px;
+      }
+      .wire span {
+        color: #859087;
+      }
+      .visual-note {
+        position: absolute;
+        right: -20px;
+        bottom: -18px;
+        padding: 12px 17px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: #fff;
+        box-shadow: 0 8px 25px #0001;
+        color: #315a3d;
+        font-size: 11px;
+        font-weight: 800;
+      }
+      @media (max-width: 800px) {
+        .wrap {
+          width: min(100% - 32px, 1270px);
+        }
+        .nav a:not(.contact) {
+          display: none;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 40px;
+          padding: 55px 0;
+        }
+        .visual {
+          max-width: 550px;
+        }
+        .facts {
+          flex-wrap: wrap;
+          gap: 10px 20px;
+        }
+      }
+      @media (max-width: 500px) {
+        .top {
+          min-height: 68px;
+        }
+        .logo {
+          font-size: 16px;
+        }
+        .nav .contact {
+          padding: 9px 12px;
+          font-size: 11px;
+        }
+        h1 {
+          font-size: clamp(42px, 11vw, 58px);
+        }
+        .lead {
+          font-size: 16px;
+        }
+        .actions {
+          flex-direction: column;
+        }
+        .button {
+          width: 100%;
+        }
+        .inside {
+          padding: 22px;
+        }
+        .visual-note {
+          right: 2px;
+          bottom: -24px;
+        }
+        .facts {
+          margin-top: 28px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="logo" href="../">goodmeasure<b>.</b></a>
+        <nav class="nav" aria-label="Concept navigation">
+          <a href="../#services">What we do</a><a href="../#pricing">Pricing</a
+          ><a href="../#contact" class="contact">Start a project ↗</a>
+        </nav>
+      </header>
+      <main class="hero">
+        <div>
+          <p class="eyebrow">
+            <i aria-hidden="true"></i> Sevenoaks / Kent / Local businesses
+          </p>
+          <h1>Your next customer starts with a <em>better website.</em></h1>
+          <p class="lead">
+            Clear websites, local SEO and simple enquiry tools for businesses
+            that want more calls, bookings and quote requests.
+          </p>
+          <div class="actions">
+            <a class="button" href="../#pricing"
+              >See the packages <span aria-hidden="true">↗</span></a
+            ><a class="button alt" href="../#contact"
+              >Tell us about your business</a
+            >
+          </div>
+          <div class="facts">
+            <span>Fixed-scope projects</span><span>Built for mobile</span
+            ><span>Support after launch</span>
+          </div>
+        </div>
+        <div
+          class="visual"
+          id="offer"
+          aria-label="Illustrative website page structure"
+        >
+          <div class="window">
+            <div class="bar">
+              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span
+              ><span>EXAMPLE PAGE STRUCTURE</span><span>↗</span>
+            </div>
+            <div class="inside">
+              <small>WHAT A GOOD WEBSITE DOES</small>
+              <h2>Make it easy to choose you.</h2>
+              <p>
+                Explain the service. Show the value. Give visitors a clear way
+                to get in touch.
+              </p>
+              <span class="mock-button">Get a quote →</span>
+              <div class="wire">
+                <div>
+                  <span>01</span><b>Services</b><span>What you do</span>
+                </div>
+                <div><span>02</span><b>Trust</b><span>Why you</span></div>
+                <div><span>03</span><b>Contact</b><span>Next step</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="visual-note">
+            Built to turn interest into enquiries ↗
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

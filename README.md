@@ -19,6 +19,7 @@ Alternative names considered: Oak & Signal, Fieldwork Digital, Near & Clear, and
 ## What is included
 
 - Original one-page site with service, pricing, process, local trust, FAQ and contact sections
+- Five standalone first-screen design studies at `/concepts/` for comparing distinct visual directions; the current homepage is unchanged while a direction is selected
 - Build-only / managed-monthly pricing switch
 - Responsive mobile navigation
 - Accessible structure, visible focus states and reduced-motion support
@@ -84,5 +85,8 @@ The pricing is positioned as an honest starting point and should be adjusted onc
     ├── favicon.svg
     ├── index.html
     ├── script.js
-    └── styles.css
+    ├── styles.css
+    └── concepts/
+        ├── index.html
+        └── 01.html … 05.html
 ```

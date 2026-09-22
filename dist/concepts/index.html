@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Five first-screen directions | Good Measure Studio</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f4f5f5;
+        color: #181d1c;
+        font:
+          16px/1.5 Arial,
+          sans-serif;
+      }
+      main {
+        max-width: 1140px;
+        margin: auto;
+        padding: clamp(32px, 6vw, 80px) 24px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 72px;
+      }
+      header a {
+        font-weight: 700;
+        color: inherit;
+        text-decoration: none;
+      }
+      .eyebrow {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      h1 {
+        max-width: 800px;
+        margin: 0 0 20px;
+        font-size: clamp(40px, 6vw, 76px);
+        line-height: 1.02;
+        letter-spacing: -0.06em;
+      }
+      header + p {
+        max-width: 620px;
+        color: #5b6460;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 55px;
+      }
+      .card {
+        position: relative;
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 28px;
+        border: 1px solid #d6dddd;
+        border-radius: 18px;
+        background: #fff;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px #17211d1a;
+      }
+      .card:focus-visible {
+        outline: 3px solid #000;
+        outline-offset: 3px;
+      }
+      .card:nth-child(1) {
+        background: #edf9ef;
+      }
+      .card:nth-child(2) {
+        background: #202322;
+        color: #fff;
+      }
+      .card:nth-child(3) {
+        background: #2645dc;
+        color: #fff;
+      }
+      .card:nth-child(4) {
+        background: #f0e8e0;
+      }
+      .card:nth-child(5) {
+        background: #fff;
+      }
+      .card .no {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+      .card h2 {
+        max-width: 350px;
+        margin: 0;
+        font-size: clamp(30px, 3vw, 44px);
+        line-height: 1.05;
+        letter-spacing: -0.05em;
+      }
+      .card .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 10px;
+        font-size: 13px;
+      }
+      .card .arrow {
+        font-size: 26px;
+      }
+      .swatches {
+        display: flex;
+        gap: 5px;
+      }
+      .swatches i {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #7777;
+        border-radius: 50%;
+      }
+      .card:last-child {
+        grid-column: span 2;
+      }
+      @media (max-width: 650px) {
+        header {
+          margin-bottom: 50px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .card:last-child {
+          grid-column: auto;
+        }
+        .card {
+          min-height: 230px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="eyebrow">Good Measure Studio / Design study</span
+        ><a href="../">Current site ↗</a>
+      </header>
+      <h1>Five ways to make the first impression.</h1>
+      <p>
+        Each link opens only a first-screen concept. The homepage stays as it is
+        while you choose the pieces worth developing.
+      </p>
+      <div class="grid">
+        <a class="card" href="01.html"
+          ><span class="no">01 / CLEAR AND COMMERCIAL</span>
+          <h2>Make the next enquiry easy.</h2>
+          <span class="meta"
+            ><span class="swatches"
+              ><i style="background: #fff"></i
+              ><i style="background: #17a65a"></i
+              ><i style="background: #17211d"></i></span
+            ><span>Open concept <span class="arrow">↗</span></span></span
+          ></a
+        >
+        <a class="card" href="02.html"
+          ><span class="no">02 / BOLD AND PRACTICAL</span>
+          <h2>Built for the work that matters.</h2>
+          <span class="meta"
+            ><span class="swatches"
+              ><i style="background: #202322"></i
+              ><i style="background: #ff8846"></i
+              ><i style="background: #f5f1e9"></i></span
+            ><span>Open concept <span class="arrow">↗</span></span></span
+          ></a
+        >
+        <a class="card" href="03.html"
+          ><span class="no">03 / BRIGHT AND CONNECTED</span>
+          <h2>All the essentials, working together.</h2>
+          <span class="meta"
+            ><span class="swatches"
+              ><i style="background: #2645dc"></i
+              ><i style="background: #fff"></i
+              ><i style="background: #ddf3ff"></i></span
+            ><span>Open concept <span class="arrow">↗</span></span></span
+          ></a
+        >
+        <a class="card" href="04.html"
+          ><span class="no">04 / WARM AND LOCAL</span>
+          <h2>Good work deserves to be found.</h2>
+          <span class="meta"
+            ><span class="swatches"
+              ><i style="background: #f0e8e0"></i
+              ><i style="background: #632c52"></i
+              ><i style="background: #1d1d1b"></i></span
+            ><span>Open concept <span class="arrow">↗</span></span></span
+          ></a
+        >
+        <a class="card" href="05.html"
+          ><span class="no">05 / PURE AND PRECISE</span>
+          <h2>Nothing between you and the message.</h2>
+          <span class="meta"
+            ><span class="swatches"
+              ><i style="background: #fff"></i><i style="background: #111"></i
+              ><i style="background: #dedede"></i></span
+            ><span>Open concept <span class="arrow">↗</span></span></span
+          ></a
+        >
+      </div>
+    </main>
+  </body>
+</html>

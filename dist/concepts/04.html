@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Concept 04 — Warm & Local</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #f0e8e0;
+        --plum: #632c52;
+        --ink: #1d1d1b;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "DM Sans", Arial, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      :focus-visible {
+        outline: 3px solid var(--plum);
+        outline-offset: 4px;
+      }
+      .screen {
+        min-height: 100svh;
+        display: grid;
+        grid-template-columns: minmax(190px, 20%) 1fr;
+      }
+      .side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 36px 30px;
+        border-right: 1px solid #d5c9bf;
+      }
+      .logo {
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: -0.075em;
+        line-height: 1;
+      }
+      .logo small {
+        display: block;
+        margin-top: 8px;
+        color: var(--plum);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .side-bottom {
+        display: grid;
+        gap: 14px;
+        color: #655b55;
+        font-size: 12px;
+      }
+      .side-bottom strong {
+        color: var(--plum);
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .page {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 0;
+        padding: 36px clamp(30px, 5vw, 90px) 30px;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #d1c4ba;
+        color: #6a5d56;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .top a {
+        padding: 9px 13px;
+        border: 1px solid var(--plum);
+        border-radius: 2px;
+        color: var(--plum);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.4fr 0.6fr;
+        align-items: end;
+        gap: clamp(30px, 6vw, 90px);
+        padding: 50px 0;
+      }
+      .eyebrow {
+        margin: 0 0 20px;
+        color: var(--plum);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+      h1 {
+        max-width: 900px;
+        margin: 0;
+        font-size: clamp(58px, 7vw, 120px);
+        font-weight: 700;
+        line-height: 0.98;
+        letter-spacing: -0.09em;
+      }
+      h1 span {
+        color: var(--plum);
+      }
+      .lead {
+        max-width: 650px;
+        margin: 35px 0 0;
+        color: #5f5752;
+        font-size: 17px;
+        line-height: 1.7;
+      }
+      .right {
+        padding-left: 25px;
+        border-left: 2px solid var(--plum);
+      }
+      .right strong {
+        display: block;
+        margin-bottom: 18px;
+        color: var(--plum);
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .right p {
+        margin: 0 0 26px;
+        color: #5f5752;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      .cta {
+        display: block;
+        width: 100%;
+        padding: 17px 19px;
+        background: var(--plum);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+        transition: letter-spacing 0.2s;
+      }
+      .cta:hover {
+        letter-spacing: 0.03em;
+      }
+      .bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding-top: 22px;
+        border-top: 1px solid #d1c4ba;
+        color: var(--plum);
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .bottom span {
+        display: block;
+        margin-bottom: 4px;
+        color: #8e817a;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      @media (max-width: 950px) {
+        .screen {
+          grid-template-columns: 140px 1fr;
+        }
+        .side {
+          padding-inline: 18px;
+        }
+        .page {
+          padding-inline: 30px;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .right {
+          max-width: 570px;
+        }
+      }
+      @media (max-width: 600px) {
+        .screen {
+          display: block;
+        }
+        .side {
+          display: none;
+        }
+        .page {
+          min-height: 100svh;
+          padding: 20px;
+        }
+        .top {
+          padding-bottom: 14px;
+        }
+        .hero {
+          padding: 65px 0 50px;
+        }
+        h1 {
+          font-size: clamp(52px, 13vw, 78px);
+        }
+        .lead {
+          font-size: 15px;
+          margin-top: 24px;
+        }
+        .right {
+          padding-left: 17px;
+        }
+        .right p {
+          margin-bottom: 18px;
+        }
+        .bottom {
+          gap: 8px;
+          font-size: 10px;
+        }
+        .bottom span {
+          font-size: 8px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="screen">
+      <aside class="side">
+        <a href="../" class="logo">good<br />measure.<small>Studio</small></a>
+        <div class="side-bottom">
+          <strong>Working across</strong><span>Sevenoaks</span
+          ><span>Tonbridge</span><span>Tunbridge Wells</span
+          ><span>Wider Kent</span>
+        </div>
+      </aside>
+      <div class="page">
+        <header class="top">
+          <span>Independent web studio / Kent</span
+          ><a href="../#contact">Start a conversation ↗</a>
+        </header>
+        <main class="hero">
+          <div>
+            <p class="eyebrow">For the businesses on our doorstep</p>
+            <h1>Good work deserves to <span>be found.</span></h1>
+            <p class="lead">
+              We make websites that do justice to the people behind local
+              businesses: clear on what you offer, easy to use and ready to
+              bring in the next enquiry.
+            </p>
+          </div>
+          <div class="right">
+            <strong>What we take care of</strong>
+            <p>
+              Design &amp; development<br />Local search visibility<br />Contact
+              and booking tools<br />Hosting and updates
+            </p>
+            <a href="../#pricing" class="cta">View a clear starting price ↗</a>
+          </div>
+        </main>
+        <div class="bottom">
+          <div><span>01 / Discover</span>Your business, understood</div>
+          <div><span>02 / Build</span>Your website, made useful</div>
+          <div><span>03 / Support</span>Your growth, backed up</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
