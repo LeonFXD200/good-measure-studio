@@ -82,6 +82,7 @@ The pricing is positioned as an honest starting point and should be adjusted onc
 ├── .openai/hosting.json
 └── dist
     ├── assets/kent-studio.webp
+    ├── favicon.svg
     ├── index.html
     ├── script.js
     └── styles.css
